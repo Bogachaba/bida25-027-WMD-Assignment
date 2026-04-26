@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Café De La Parix</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="nav" id="navbar">
+    <div class="nav-logo">
+      <img src="images/logo.png" alt="Café De La Parix Logo" onerror="this.style.display='none'"/>
+      <span class="nav-brand">Café De La Parix</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="reservation.html" class="nav-cta">Reservation</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" onclick="closeMobile()">Home</a></li>
+      <li><a href="about.html" onclick="closeMobile()">About</a></li>
+      <li><a href="menu.html" onclick="closeMobile()">Menu</a></li>
+      <li><a href="gallery.html" onclick="closeMobile()">Gallery</a></li>
+      <li><a href="contact.html" onclick="closeMobile()">Contact</a></li>
+      <li><a href="reservation.html" class="nav-cta" onclick="closeMobile()">Reservation</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline>
+        <source src="video/aboutus.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-veil"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Est. 2018 · Gaborone</p>
+      <h1 class="hero-title reveal">
+        <em>The Art</em><br/>of the<br/>Perfect Cup
+      </h1>
+      <p class="hero-sub reveal">Where every visit is a story worth telling.</p>
+      <a href="about.html" class="btn-ghost reveal">Discover Our Story</a>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ STORY ═══════════════ -->
+  <section class="story" id="story">
+    <div class="story-inner">
+      <div class="story-label reveal-left">Our Story</div>
+
+      <div class="story-text reveal-right">
+        <h2>Born from a<br/><em>Passion</em> for Connection</h2>
+        <p>Café De La Parix began as a dream shared over a single cup of coffee — the belief that a truly great café could do more than serve drinks. It could build community, ignite conversations, and become the heartbeat of a neighbourhood.</p>
+        <p>From humble beginnings, we've grown into Gaborone's most beloved gathering place, where locals and visitors come not just for the food, but for the feeling of belonging.</p>
+      </div>
+
+      <div class="story-stat-row">
+        <div class="stat reveal">
+          <span class="stat-num" data-target="7">0</span>
+          <span class="stat-unit">+</span>
+          <p>Years of Craft</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-target="12">0</span>
+          <span class="stat-unit">K+</span>
+          <p>Happy Guests</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-target="40">0</span>
+          <span class="stat-unit">+</span>
+          <p>Menu Items</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-target="100">0</span>
+          <span class="stat-unit">%</span>
+          <p>Local Sourcing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ MISSION ═══════════════ -->
+  <section class="mission">
+    <div class="mission-bg-text">MISSION</div>
+    <div class="mission-inner">
+      <div class="mission-img reveal-left">
+        <div class="mission-img-frame">
+          <img src="images/mission2.0.jpg" alt="Café atmosphere" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80'"/>
+          <div class="mission-img-accent"></div>
+        </div>
+      </div>
+      <div class="mission-content reveal-right">
+        <span class="section-label">Our Mission</span>
+        <h2>Quality. Community.<br/><em>Sustainability.</em></h2>
+        <p>Our mission is woven into every decision we make — from sourcing our beans to composting our grounds. We believe cafés have a responsibility to their community and their planet.</p>
+        <p>Every ingredient is chosen with intention. Every interaction is crafted with care. This is hospitality as philosophy.</p>
+        <a href="#" class="btn-solid">View Our Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WHY CHOOSE US ═══════════════ -->
+  <section class="values">
+    <div class="values-header reveal">
+      <span class="section-label">Why Choose Us</span>
+      <h2>Four Pillars of the<br/><em>Parix Promise</em></h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-icon">☕</div>
+        <h3>Ethically Sourced Beans</h3>
+        <p>We partner directly with small-farm cooperatives, ensuring fair pay and traceable origins in every cup we serve.</p>
+        <div class="value-line"></div>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">🍰</div>
+        <h3>Daily Fresh Bakes</h3>
+        <p>Every pastry, tart, and loaf is baked on-site each morning. If it wasn't baked today, it isn't on the counter.</p>
+        <div class="value-line"></div>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">👩‍🍳</div>
+        <h3>Warmth in Every Corner</h3>
+        <p>Our team is trained not just in craft, but in hospitality. We remember your order and welcome you by name.</p>
+        <div class="value-line"></div>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">🌍</div>
+        <h3>Rooted in Botswana</h3>
+        <p>From local dairy farms to Gaborone artisan suppliers — our menu celebrates what grows and thrives right here.</p>
+        <div class="value-line"></div>
+      </div>
+    </div>
+  </section>
+
+          <!-- ═══════════════ TEAM ═══════════════ -->
+  <section class="team">
+    <div class="team-header reveal">
+      <span class="section-label">The People</span>
+      <h2>Meet the Faces Behind<br/><em>Every Perfect Moment</em></h2>
+    </div>
+ 
+    <div class="team-grid">
+ 
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="images/head chef.jpg" alt="David" onerror="this.src='https://images.unsplash.com/photo-1607631568010-a87245c0daf6?w=400&q=80'"/>
+          <div class="team-overlay">
+            <p>"Food is love made visible."</p>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>David</h4>
+          <span>Head Chef</span>
+          <p>Crafting dishes with 12 years of culinary artistry and a relentless passion for bold flavours.</p>
+        </div>
+      </div>
+ 
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="images/chef.jpg" alt="Maria" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80'"/>
+          <div class="team-overlay">
+            <p>"Every cup tells a story."</p>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Maria</h4>
+          <span>Chef</span>
+          <p>Champion barista with a nose for origin and hands that coax perfection from every grind.</p>
+        </div>
+      </div>
+ 
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="images/manager.jpg" alt="Linda" onerror="this.src='https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&q=80'"/>
+          <div class="team-overlay">
+            <p>"Hospitality is an act of generosity."</p>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Linda</h4>
+          <span>General Manager</span>
+          <p>The heartbeat of Café De La Parix — ensuring every guest leaves having felt truly seen and welcomed.</p>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+
+  <!-- ═══════════════ QUOTE ═══════════════ -->
+  <section class="quote-section">
+    <div class="quote-inner reveal">
+      <div class="quote-mark">"</div>
+      <blockquote>A cup of coffee shared with a friend is happiness tasted and time well spent.</blockquote>
+      <cite>— The Café De La Parix Philosophy</cite>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo-text">Café De La Parix</span>
+        <p>Where every cup is crafted with intention and every visit becomes a memory.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <p>Plot No. 60744<br/>Gaborone, Botswana</p>
+        <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57312.49278609483!2d25.8498964!3d-24.6282079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebffdaa87f1f0c9%3A0x7a987f5519c0c84b!2sGaborone%2C%20Botswana!5e0!3m2!1sen!2sbw!4v1700000000000!5m2!1sen!2sbw"
+            width="100%" height="220" style="border:0;border-radius:10px;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Monday – Friday<br/><strong>08:00 – 22:00</strong></p>
+        <p>Saturday – Sunday<br/><strong>09:00 – 23:00</strong></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <p>📞 +267 75641219</p>
+        <p>📧 chababogah@gmail.com</p>
+        <a href="reservation.html" class="btn-solid" style="margin-top:16px;display:inline-block;">Reserve Now</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Café De La Parix · Gaborone, Botswana. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="about.js"></script>
+  <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</body>
+</html>

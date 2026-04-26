@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe De La Paris — Home</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Raleway:wght@200;300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ══════════════════ CURSOR ══════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ══════════════════ NAV ══════════════════ -->
+  <header class="nav-wrap" id="navbar">
+    <div class="nav-inner">
+
+      <div class="nav-logo">
+        <img src="images/logo 3.0.png" alt="Cafe De La Paris Logo">
+      </div>
+
+      <p class="nav-brand">Cafe De La Paris</p>
+
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservation.html" class="nav-cta">Reservation</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="reservation.html">Reserve a table</a>
+    </nav>
+  </div>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Background video -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="video/emily.mp4" type="video/mp4">
+    </video>
+
+    <!-- Layered overlays -->
+    <div class="hero-overlay-1"></div>
+    <div class="hero-overlay-2"></div>
+
+    <!-- Decorative vertical text -->
+    <p class="hero-vert-left">Est. 2020 · Gaborone, Botswana</p>
+    <p class="hero-vert-right">Fine Dining · Crafted With Love</p>
+
+    <!-- Main hero content -->
+    <div class="hero-content">
+      <span class="hero-tag">Welcome to</span>
+      <h1 class="hero-title">
+        <em>Cafe</em>
+        <span class="hero-title-script">De La Paris</span>
+      </h1>
+      <p class="hero-sub">Where every plate is a brushstroke,<br>and every visit is a masterpiece.</p>
+      <div class="hero-actions">
+        <a href="reservation.html" class="btn-primary">Reserve a Table</a>
+        <a href="menu.html" class="btn-ghost">Explore Menu</a>
+      </div>
+    </div>
+
+    <!-- Animated scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-bar"><div class="scroll-thumb"></div></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════ MARQUEE STRIP ══════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Fine Dining</span>
+      <span class="dot">◆</span>
+      <span>Artisan Coffee</span>
+      <span class="dot">◆</span>
+      <span>Private Events</span>
+      <span class="dot">◆</span>
+      <span>Seasonal Menu</span>
+      <span class="dot">◆</span>
+      <span>Live Jazz Fridays</span>
+      <span class="dot">◆</span>
+      <span>Award-Winning Cuisine</span>
+      <span class="dot">◆</span>
+      <span>Fine Dining</span>
+      <span class="dot">◆</span>
+      <span>Artisan Coffee</span>
+      <span class="dot">◆</span>
+      <span>Private Events</span>
+      <span class="dot">◆</span>
+      <span>Seasonal Menu</span>
+      <span class="dot">◆</span>
+      <span>Live Jazz Fridays</span>
+      <span class="dot">◆</span>
+      <span>Award-Winning Cuisine</span>
+      <span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════ REVIEWS ══════════════════ -->
+  <section class="reviews-section reveal-section">
+    <div class="reviews-header">
+      <span class="section-tag">Voices of Our Guests</span>
+      <h2 class="section-title">What People <em>Are Saying</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+
+    <div class="reviews-track-wrap">
+      <div class="reviews-track" id="reviewsTrack">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The most memorable dining experience I've had in Gaborone. The duck confit is pure poetry on a plate."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#2c1f0a;">
+              <!-- Replace with: <img src="images/sarah.jpg" alt="Sarah"> -->
+              <span>S</span>
+            </div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Gaborone, BW</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Best coffee in town, hands down. The atmosphere is stunning and the staff make you feel like royalty."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#0f1a10;">
+              <span>J</span>
+            </div>
+            <div>
+              <strong>James K.</strong>
+              <span>Francistown, BW</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Friendly staff, gorgeous décor and absolutely delicious desserts. We come every weekend!"</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#1a0f0a;">
+              <span>L</span>
+            </div>
+            <div>
+              <strong>Lebo T.</strong>
+              <span>Gaborone, BW</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The truffle risotto alone is worth a trip across the city. Truly world-class cooking."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#0a0f1a;">
+              <span>A</span>
+            </div>
+            <div>
+              <strong>Amelia R.</strong>
+              <span>Cape Town, SA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Jazz night on Friday was magical. Great music, great wine, unforgettable company."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#081418;">
+              <span>M</span>
+            </div>
+            <div>
+              <strong>Mike O.</strong>
+              <span>Johannesburg, SA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dots navigation -->
+    <div class="reviews-dots" id="reviewsDots"></div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <img src="images/logo 3.0.png" alt="Cafe De La Paris Logo" class="footer-logo">
+        <p class="footer-tagline">Where every bite tells a story.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-map-col">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.123456789!2d-0.119543!3d51.503324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b123456789%3A0xabcdef123456789!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2suk!4v1600000000000!5m2!1sen!2suk"
+          width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <a href="home.html">Home</a>
+        <a href="about.css">About</a>
+        <a href="#">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reservation.html">Reservations</a>
+      </div>
+
+      <div class="footer-info-col">
+        <h4>Visit Us</h4>
+        <p>Plot No. 60744<br>Gaborone, Botswana</p>
+        <p style="margin-top:0.8rem;">📞 +267 75641219</p>
+        <p>📧 chababogah@gmail.com</p>
+        <p style="margin-top:0.8rem;">Mon – Fri: 08:00 – 22:00</p>
+        <p>Sat – Sun: 09:00 – 23:00</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2020 Cafe De La Paris · Powered by WPDEVELOPER</p>
+      <p>Crafted with passion in Gaborone, Botswana</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
+
+</body>
+</html>

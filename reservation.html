@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservations — Café De La Parix</title>
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="reservation.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,700&family=Tenor+Sans&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="noise"></div>
+  <canvas id="candleCanvas"></canvas>
+  <div class="dot" id="dot"></div>
+  <div class="dot-ring" id="dotRing"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="brand">Café De La Parix</a>
+    <ul class="links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="reservation.html" class="active-link">Reservation</a></li>
+    </ul>
+    <button class="hbg" id="hbg"><span></span><span></span></button>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <button class="dr-x" id="drX">✕</button>
+    <ul>
+      <li><a href="index.html" onclick="closeDr()">Home</a></li>
+      <li><a href="about.html" onclick="closeDr()">About</a></li>
+      <li><a href="menu.html" onclick="closeDr()">Menu</a></li>
+      <li><a href="gallery.html" onclick="closeDr()">Gallery</a></li>
+      <li><a href="contact.html" onclick="closeDr()">Contact</a></li>
+      <li><a href="reservation.html" onclick="closeDr()">Reservations</a></li>
+    </ul>
+  </div>
+  <div class="dr-bd" id="drBd" onclick="closeDr()"></div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <!-- Art deco decorative lines -->
+    <div class="deco-frame">
+      <div class="deco-tl"></div>
+      <div class="deco-tr"></div>
+      <div class="deco-bl"></div>
+      <div class="deco-br"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-ornament">✦ &nbsp;&nbsp; ✦ &nbsp;&nbsp; ✦</div>
+      <p class="hero-tag">Reservations</p>
+      <h1 class="hero-h1">Reserve Your<br/><em>Table</em></h1>
+      <p class="hero-sub">Secure your seat and let us take care of the rest. Every reservation is the beginning of a memory.</p>
+      <div class="hero-ornament" style="margin-top:0;">─────── ✦ ───────</div>
+      <a href="#form" class="hero-btn">Book a Table</a>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE STRIP ══ -->
+  <section class="strip">
+    <div class="strip-inner">
+      <div class="strip-item rv">
+        <span class="strip-icon">🕯️</span>
+        <h3>Candlelit Ambience</h3>
+        <p>Every evening setting bathed in warm, intimate light.</p>
+      </div>
+      <div class="strip-divider">✦</div>
+      <div class="strip-item rv">
+        <span class="strip-icon">🍽️</span>
+        <h3>Chef's Tasting Menu</h3>
+        <p>Request our exclusive 5-course experience at booking.</p>
+      </div>
+      <div class="strip-divider">✦</div>
+      <div class="strip-item rv">
+        <span class="strip-icon">🎂</span>
+        <h3>Special Occasions</h3>
+        <p>Let us know — we'll make it truly unforgettable.</p>
+      </div>
+      <div class="strip-divider">✦</div>
+      <div class="strip-item rv">
+        <span class="strip-icon">📞</span>
+        <h3>Instant Confirmation</h3>
+        <p>You'll receive your booking confirmation within minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MAIN FORM AREA ══ -->
+  <main class="main" id="form">
+
+    <!-- Decorative side panel -->
+    <aside class="side-panel">
+      <div class="side-inner">
+        <div class="side-label rv">The Experience</div>
+
+        <blockquote class="side-quote rv">
+          <p>"To reserve a table at Café De La Parix is to promise yourself a moment of pure pleasure."</p>
+          <cite>— Linda, General Manager</cite>
+        </blockquote>
+
+        <div class="side-info rv">
+          <h4>Dining Hours</h4>
+          <ul>
+            <li><span>Mon – Fri</span><span>08:00 – 22:00</span></li>
+            <li><span>Sat – Sun</span><span>09:00 – 23:00</span></li>
+          </ul>
+          <p class="side-note">Last seating 90 minutes before close.</p>
+        </div>
+
+        <div class="side-info rv">
+          <h4>Group Bookings</h4>
+          <p>For parties of 10 or more, please call us directly at <strong>+267 75641219</strong> or email <strong>chababogah@gmail.com</strong>.</p>
+        </div>
+
+        <div class="side-info rv">
+          <h4>Cancellation Policy</h4>
+          <p>Free cancellation up to 24 hours before your reservation. We ask for 48 hours notice for parties of 6+.</p>
+        </div>
+
+        <!-- Decorative art deco diamond -->
+        <div class="side-diamond rv">
+          <div class="diamond-inner">✦</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Reservation form -->
+    <section class="res-form-wrap">
+      <div class="res-header rv">
+        <p class="res-tag">Book Your Visit</p>
+        <h2>Make a<br/><em>Reservation</em></h2>
+        <div class="res-rule"></div>
+      </div>
+
+      <form class="res-form" id="resForm" novalidate>
+
+        <!-- Step indicator -->
+        <div class="steps rv">
+          <div class="step active" data-step="1">
+            <div class="step-dot">1</div>
+            <span>Details</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step" data-step="2">
+            <div class="step-dot">2</div>
+            <span>Date & Time</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step" data-step="3">
+            <div class="step-dot">3</div>
+            <span>Confirm</span>
+          </div>
+        </div>
+
+        <!-- STEP 1: Personal Details -->
+        <div class="form-step active" id="step1">
+          <h3 class="step-title">Your Details</h3>
+
+          <div class="f-row">
+            <div class="f">
+              <label for="rFirstName">First Name *</label>
+              <input type="text" id="rFirstName" placeholder="e.g. Bogah" required autocomplete="given-name"/>
+            </div>
+            <div class="f">
+              <label for="rLastName">Last Name *</label>
+              <input type="text" id="rLastName" placeholder="e.g. Chaba" required autocomplete="family-name"/>
+            </div>
+          </div>
+
+          <div class="f">
+            <label for="rEmail">Email Address *</label>
+            <input type="email" id="rEmail" placeholder="you@example.com" required autocomplete="email"/>
+          </div>
+
+          <div class="f">
+            <label for="rPhone">Phone Number *</label>
+            <input type="tel" id="rPhone" placeholder="+267 7X XXX XXX" required autocomplete="tel"/>
+          </div>
+
+          <div class="f">
+            <label for="rOccasion">Occasion (optional)</label>
+            <div class="sel-wrap">
+              <select id="rOccasion">
+                <option value="" selected>Select if applicable…</option>
+                <option>Birthday Celebration 🎂</option>
+                <option>Anniversary 💑</option>
+                <option>Business Dinner 💼</option>
+                <option>Date Night 🌹</option>
+                <option>Family Gathering 👨‍👩‍👧</option>
+                <option>Just a Great Meal 🍽️</option>
+              </select>
+              <i class="fas fa-chevron-down sel-arrow"></i>
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn-next" id="toStep2">
+              Continue <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Date & Time -->
+        <div class="form-step" id="step2">
+          <h3 class="step-title">Date &amp; Time</h3>
+
+          <div class="f-row">
+            <div class="f">
+              <label for="rDate">Preferred Date *</label>
+              <input type="date" id="rDate" required/>
+            </div>
+            <div class="f">
+              <label for="rTime">Preferred Time *</label>
+              <div class="sel-wrap">
+                <select id="rTime" required>
+                  <option value="" disabled selected>Choose a time…</option>
+                  <optgroup label="Morning">
+                    <option>08:00</option><option>08:30</option>
+                    <option>09:00</option><option>09:30</option>
+                    <option>10:00</option><option>10:30</option>
+                    <option>11:00</option><option>11:30</option>
+                  </optgroup>
+                  <optgroup label="Afternoon">
+                    <option>12:00</option><option>12:30</option>
+                    <option>13:00</option><option>13:30</option>
+                    <option>14:00</option><option>14:30</option>
+                    <option>15:00</option><option>15:30</option>
+                    <option>16:00</option><option>16:30</option>
+                    <option>17:00</option>
+                  </optgroup>
+                  <optgroup label="Evening">
+                    <option>17:30</option><option>18:00</option>
+                    <option>18:30</option><option>19:00</option>
+                    <option>19:30</option><option>20:00</option>
+                    <option>20:30</option><option>21:00</option>
+                  </optgroup>
+                </select>
+                <i class="fas fa-chevron-down sel-arrow"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="f">
+            <label>Number of Guests *</label>
+            <div class="guest-picker">
+              <button type="button" class="guest-btn" id="guestMinus" aria-label="Decrease">−</button>
+              <div class="guest-display">
+                <span id="guestCount">2</span>
+                <span class="guest-label">guests</span>
+              </div>
+              <button type="button" class="guest-btn" id="guestPlus" aria-label="Increase">+</button>
+            </div>
+            <input type="hidden" id="rGuests" value="2"/>
+          </div>
+
+          <!-- Visual time slots -->
+          <div class="f">
+            <label>Seating Preference</label>
+            <div class="seat-options">
+              <label class="seat-opt">
+                <input type="radio" name="seating" value="indoor" checked/>
+                <span>🪑 Indoor</span>
+              </label>
+              <label class="seat-opt">
+                <input type="radio" name="seating" value="outdoor"/>
+                <span>🌿 Outdoor Terrace</span>
+              </label>
+              <label class="seat-opt">
+                <input type="radio" name="seating" value="bar"/>
+                <span>☕ Bar Counter</span>
+              </label>
+              <label class="seat-opt">
+                <input type="radio" name="seating" value="private"/>
+                <span>🔒 Private Room</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="f">
+            <label for="rNotes">Special Requests</label>
+            <textarea id="rNotes" rows="4" placeholder="Dietary requirements, allergies, décor requests, anything at all…"></textarea>
+          </div>
+
+          <div class="step-nav spaced">
+            <button type="button" class="btn-back" id="toStep1">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="button" class="btn-next" id="toStep3">
+              Review Booking <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Confirmation Summary -->
+        <div class="form-step" id="step3">
+          <h3 class="step-title">Confirm Your Reservation</h3>
+          <p class="confirm-sub">Please review your details before submitting.</p>
+
+          <div class="summary-card">
+            <div class="summary-deco">✦</div>
+            <h4>Café De La Parix</h4>
+            <div class="summary-grid" id="summaryGrid">
+              <!-- Filled by JS -->
+            </div>
+          </div>
+
+          <div class="f checkbox-f">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rAgree" required/>
+              <span class="checkbox-custom"></span>
+              <span>I agree to the <a href="#">cancellation policy</a> and <a href="#">terms of booking</a>.</span>
+            </label>
+          </div>
+
+          <div class="step-nav spaced">
+            <button type="button" class="btn-back" id="toStep2b">
+              <i class="fas fa-arrow-left"></i> Edit
+            </button>
+            <button type="submit" class="btn-confirm" id="confirmBtn">
+              <span class="bc-text">Confirm Reservation</span>
+              <i class="fas fa-check"></i>
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Success screen -->
+      <div class="success-screen" id="successScreen">
+        <div class="success-ornament">✦ ✦ ✦</div>
+        <div class="success-icon">🎉</div>
+        <h2>You're Confirmed!</h2>
+        <p>We can't wait to welcome you. A confirmation has been sent to <strong id="successEmail"></strong>.</p>
+        <div class="success-rule"></div>
+        <p class="success-reminder">
+          <i class="fas fa-clock"></i>
+          If your plans change, please notify us at least 24 hours in advance.<br/>
+          Call us: <strong>+267 75641219</strong>
+        </p>
+        <a href="#" class="hero-btn" style="margin-top:32px" onclick="resetForm()">Make Another Reservation</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="f-inner">
+      <span class="f-brand">Café De La Parix</span>
+      <p>© 2026 Cafe De La Paris. All rights reserved.</p>
+      <div class="f-socials">
+        <a href="https://www.facebook.com/profile.php?id=61563733542906"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/cafed.e/"><i class="fab fa-instagram"></i></a>
+        <a href="www.youtube.com/@cafedelaParix"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="reservation.js"></script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmRAAAAFp68+e9d4gBHAAi8GZhON" crossorigin="anonymous"></script>
+
+</body>
+</html>
